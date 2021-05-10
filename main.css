@@ -33,19 +33,11 @@ h1
 	width: 50%;
 }
 
-#red
+.green
 {
-	color: red;
-}
-
-#green
-{
- 	color: green;
-}
-
-#orange
-{
-	color: orange;
+	color: green;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
 }
 
 p
@@ -73,4 +65,8 @@ p
 	margin-bottom: auto
 }
 
+.btn
+{
+	margin-bottom: 10px;
+}
 

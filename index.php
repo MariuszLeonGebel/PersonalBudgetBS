@@ -1,15 +1,21 @@
+<?php
+  session_start();
+ ?>
+
 <!DOCTYPE html>
 <html lang="pl">
 	<head>
 	    <meta charset="UTF-8">
 	    <title>Przychody osobiste</title>
+	    <link rel="shortcut icon" href="https://img.icons8.com/office/16/000000/money-bag.png"/>
+    	<!-- <a href="https://icons8.com/icon/43840/money-box">Money Box icon by Icons8</a> money-box--v1.png-->
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	    <meta name="description" content="">
 	  	<meta name="keywords" content="">
 	  	<meta name="author" content="">
 	  	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lemon&family=Pacifico&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lemon&family=Pacifico&family=Lato&display=swap" rel="stylesheet">
 	    <link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="main.css"> 		
 	</head>
@@ -19,8 +25,7 @@
 			<div class="container">
 				
 				<header>
-					<h1 class="fancy1">Strona do prowadzenia finansów osobistych</h1>
-					<h3 class="fancy3">Kontroluj swoje przychody i wydatki</h3>	
+					<h1 class="fancy1">Finanse osobiste</h1>
 				</header>
 
 				<div class="row">
@@ -31,21 +36,27 @@
 					</div>
 	 
 					<div class="center col-sm-12 col-md-6">
-						<p></p>
-						<p id="green">Połowa Polaków ma długi a 2,5 mln nie spłaca ich na czas!</p>
-						<p id="red">Zadbaj o swoje finanse!</p>
-						<p>Sprawdź na co wydajesz swoje pieniądze!</p>
-						<p id="orange">Czy to co zarabiasz w ciągu miesiąca wystarcza ci na pokrycie twoich wydatków?</p>
+						<p class="green">Prosty sposób</p><p class="green">na kontrolę twoich<p class="green">przychodów i wydatków!</p>
 					</div>
 				</div>
 				<div></div>
 				<div class="row">
 					<div class="col-sm-6">
-						<a href="rejestracja1.html" class="btn btn-warning index_button">Rejestracja</a>
+						<a href="rejestracja.php" class="btn btn-warning index_button">Rejestracja</a>
 					</div>
 
 					<div class="col-sm-6">
-						<a href="logowanie1.html" class="btn btn-success index_button">Logowanie</a>
+						<a href="logowanie.php" class="btn btn-success index_button">Logowanie</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6" style="color: red; font-size: 12px; text-align: center; margin-left: auto; margin-right: auto;">
+					<?php
+						if(isset($_SESSION['udanarejestracja']) && $_SESSION['udanarejestracja']==true) {
+							echo "Rejestracja przebiegła prawidłowo";
+							unset($_SESSION['udanarejestracja']);
+							}
+					?>
 					</div>
 				</div>
 			</div>
