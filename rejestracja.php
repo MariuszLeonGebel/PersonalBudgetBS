@@ -311,7 +311,7 @@
 
     <script>      
       function returnToIndex() {
-        window.location.href="index.php";
+        window.location.href="index.html";
       }
     </script>
 
